@@ -12,8 +12,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <min.java.version>11</min.java.version>
-    <maven.compiler.source>${min.java.version}}</maven.compiler.source>
-    <maven.compiler.target>${min.java.version}}</maven.compiler.target>
+    <maven.compiler.source>${min.java.version}</maven.compiler.source>
+    <maven.compiler.target>${min.java.version}</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -77,7 +77,7 @@
         <version>3.0.0-M5</version>
         <configuration>
           <parallel>methods</parallel>
-          <useUnlimitedThreads>true</useUnlimitedThreads>
+          <threadCount>2</threadCount>
           <rerunFailingTestsCount>1</rerunFailingTestsCount>
         </configuration>
       </plugin>

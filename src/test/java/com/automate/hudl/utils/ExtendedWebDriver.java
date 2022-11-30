@@ -18,7 +18,7 @@ public class ExtendedWebDriver {
         String url = getProp().getProperty("ProdUrl");
         String browser_properties = getProp().getProperty("Browser");
         String platform_properties = getProp().getProperty("Platform");
-        String platform_maven = getProp().getProperty("Platform");
+        String platform_maven = System.getProperty("Platform");
         String browser_maven = System.getProperty("Browser");
 
         String browser = browser_maven != null ? browser_maven : browser_properties;
@@ -54,7 +54,7 @@ public class ExtendedWebDriver {
                 }
                 driver = new FirefoxDriver();
             }
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
             driver.get(url);
         }
         return driver;

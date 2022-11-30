@@ -13,23 +13,46 @@ This project is a maven based project and uses Selenium, junit and cucumber fram
 
 **Executing tests from the command line**
 
-The test will auto-detect the OS, pick the appropriate webdriver executable and execute the tests on the Chrome browser by default (can be overridden as given in the command below). There are 2 feature files in this project and both will be executed in parallel on different browser instances.
+There are 2 feature files in this project and both will be executed in parallel.
 
-Execute the following command from the project root directory:
+To run tests, execute the following command from the project root directory, based on the platform and browser combination:
 
-To execute tests on chrome browser:
+On Windows OS, Chrome Browser:
 ```$xslt
-mvn test -Dbrowser=chrome
+mvn test -Dplatform=windows -Dbrowser=chrome
 ```
-To execute tests on firefox browser:
+
+On Windows OS, Firefox Browser:
 ```$xslt
-mvn test -Dbrowser=firefox
+mvn test -Dplatform=windows -Dbrowser=firefox
 ```
+
+On Mac OS, Chrome Browser:
+```$xslt
+mvn test -Dplatform=mac -Dbrowser=chrome
+```
+
+On Mac OS, Firefox Browser:
+```$xslt
+mvn test -Dplatform=mac -Dbrowser=firefox
+```
+
+On Linux OS, Chrome Browser:
+```$xslt
+mvn test -Dplatform=linux -Dbrowser=chrome
+```
+
+On Linux OS, Firefox Browser:
+```$xslt
+mvn test -Dplatform=linux -Dbrowser=firefox
+```
+
 
 **Executing tests from the editor (e.g., Intellij)**
 
-Update the desired feature file and/or test tag in the JunitTestRunnerTest class (src/test/java/testRunner).
-Run the TestRunner class as a junit test with vm options value set to "-Dbrowser=chrome" or "-Dbrowser=firefox"
+1) Update the platform and browser values in the property file ("<project root>/src/main/resources/properties/hudl_prod.properties")
+2) Run the 'JunitTestRunnerTest' class as a junit test
+
 
 **Report generation**
 
