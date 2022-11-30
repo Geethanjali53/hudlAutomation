@@ -12,8 +12,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <min.java.version>11</min.java.version>
-    <maven.compiler.source>${min.java.version}</maven.compiler.source>
-    <maven.compiler.target>${min.java.version}</maven.compiler.target>
+    <maven.compiler.source>${min.java.version}}</maven.compiler.source>
+    <maven.compiler.target>${min.java.version}}</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -67,14 +67,6 @@
       <artifactId>extentreports-cucumber7-adapter</artifactId>
       <version>1.7.0</version>
     </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.24</version>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
 
   <build>
